@@ -10,16 +10,16 @@
   <h2>Scan QR untuk Membayar</h2>
   <img src="assets/qr.png" class="qr">
 
-  <p id="status">Menunggu pembayaran...</p>
+  <p>Setelah melakukan pembayaran, klik tombol di bawah</p>
+
+  <button class="btn" onclick="confirmPay()">
+    Sudah Saya Bayar
+  </button>
 
   <script>
-    setTimeout(() => {
-      document.getElementById("status").innerHTML =
-        "<img src='assets/check.png' class='check'><br>Pembayaran Berhasil";
-      setTimeout(() => {
-        window.location.href = "success.html";
-      }, 2000);
-    }, 3000);
+    function confirmPay() {
+      window.location.href = "success.html";
+    }
   </script>
 
 </body>
