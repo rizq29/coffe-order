@@ -23,10 +23,12 @@ body {
 .btn {
   background: #ffcc80;
   padding: 12px 25px;
-  text-decoration: none;
-  color: #000;
+  border: none;
   border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
 }
+
 
 .title {
   text-align: center;
@@ -107,3 +109,4 @@ body {
   background: rgba(0,0,0,0.5);
   z-index: -1;
 }
+
