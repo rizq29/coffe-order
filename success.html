@@ -2,13 +2,38 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Selesai</title>
+  <title>Pembayaran Selesai</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="center success">
 
   <h1>✅ Pembayaran Selesai</h1>
-  <p>Silakan tunggu pesanan Anda</p>
+  <p>Silakan kirim bukti pembayaran dan detail pesanan</p>
+
+  <button class="btn" onclick="sendToWA()">
+    Kirim Bukti Pembayaran & Pesanan
+  </button>
+
+  <script>
+    function sendToWA() {
+      const nama = localStorage.getItem("nama");
+      const meja = localStorage.getItem("meja");
+      const items = JSON.parse(localStorage.getItem("items")) || [];
+      const total = localStorage.getItem("total");
+
+      const pesan =
+`Halo, saya sudah melakukan pembayaran.
+Nama: ${nama}
+Meja: ${meja}
+Pesanan: ${items.join(", ")}
+Total: Rp${Number(total).toLocaleString()}
+
+(Bukti pembayaran terlampir)`;
+
+      const wa = "6282136446453";
+      window.open(`https://wa.me/${wa}?text=${encodeURIComponent(pesan)}`);
+    }
+  </script>
 
 </body>
 </html>
