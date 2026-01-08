@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2 class="title">Pilih Menu</h2>
+
+<div class="form-box">
+  <input type="text" id="nama" placeholder="Nama Pemesan">
+  <input type="text" id="meja" placeholder="Nomor Meja">
+</div>
+
+<div class="menu-grid">
+
+  <div class="card">
+    <img src="assets/americano.jpg">
+    <h3>Americano</h3>
+    <p>Rp22.000</p>
+    <button onclick="addItem('Americano',22000)">Tambah</button>
+  </div>
+
+  <div class="card">
+    <img src="assets/latte.jpg">
+    <h3>Latte</h3>
+    <p>Rp25.000</p>
+    <button onclick="addItem('Latte',25000)">Tambah</button>
+  </div>
+
+  <div class="card">
+    <img src="assets/cappuccino.jpg">
+    <h3>Cappuccino</h3>
+    <p>Rp26.000</p>
+    <button onclick="addItem('Cappuccino',26000)">Tambah</button>
+  </div>
+
+  <div class="card">
+    <img src="assets/fries.jpg">
+    <h3>French Fries</h3>
+    <p>Rp15.000</p>
+    <button onclick="addItem('French Fries',15000)">Tambah</button>
+  </div>
+
+  <div class="card">
+    <img src="assets/mendoan.jpg">
+    <h3>Mendoan</h3>
+    <p>Rp13.000</p>
+    <button onclick="addItem('Mendoan',13000)">Tambah</button>
+  </div>
+
+  <div class="card">
+    <img src="assets/tahu.jpg">
+    <h3>Tahu</h3>
+    <p>Rp15.000</p>
+    <button onclick="addItem('Tahu',15000)">Tambah</button>
+  </div>
+
+</div>
+
+<div class="total-box">
+  <p id="list"></p>
+  <h3>Total: Rp<span id="total">0</span></h3>
+  <button onclick="goPay()">Bayar</button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

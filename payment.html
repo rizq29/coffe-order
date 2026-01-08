@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pembayaran</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="center">
+
+  <h2>Scan QR untuk Membayar</h2>
+  <img src="assets/qr.png" class="qr">
+
+  <p id="status">Menunggu pembayaran...</p>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("status").innerHTML =
+        "<img src='assets/check.png' class='check'><br>Pembayaran Berhasil";
+      setTimeout(() => {
+        window.location.href = "success.html";
+      }, 2000);
+    }, 3000);
+  </script>
+
+</body>
+</html>
